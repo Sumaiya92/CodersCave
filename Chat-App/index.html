@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Real-Time Chat App</title>
+    <script src="http://localhost:3006/socket.io/socket.io.js"></script>
+    <script defer src="script.js"></script>
+</head>
+<body class="bg-gray-100 h-screen flex flex-col">
+    <header class="bg-blue-600 text-white p-4 shadow-md">
+        <h1 class="text-2xl font-bold text-center">Real-Time Chat App</h1>
+    </header>
+    <main class="flex flex-col items-center justify-center h-screen bg-gray-100">
+        <div class="w-full max-w-lg mx-auto bg-white shadow-lg rounded-lg p-4">
+            <div id="message-container" class="flex flex-col space-y-2 mb-4 overflow-y-auto h-64 p-2 bg-gray-50 rounded">
+                <!-- Messages will be appended here -->
+            </div>
+            <form id="send-container" class="flex space-x-2">
+                <input type="text" id="message-input" placeholder="Enter your message" 
+                    class="flex-1 p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                <button id="send-button" type="submit" 
+                    class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">Send</button>
+            </form>
+        </div>
+    </main>
+    
+</body>
+</html>
